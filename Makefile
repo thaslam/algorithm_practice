@@ -4,8 +4,8 @@
 #
 CC=g++
 SRCDIR=./src
+INCDIR=./include
 OUTDIR=./bin
 
-basics: $(SRCDIR)/basics.cpp
+basics: $(SRCDIR)/basics.cpp $(INCDIR)/sorting/selection_sort.h
 	$(CC) -o $(OUTDIR)/basics $(SRCDIR)/basics.cpp
-
