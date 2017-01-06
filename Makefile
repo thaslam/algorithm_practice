@@ -5,8 +5,11 @@
 CC=g++
 CFLAGS=-g
 SRCDIR=./src
-INCDIR=./include
+INCDIR=-I./include
 OUTDIR=./bin
 
-basics: $(SRCDIR)/basics.cpp $(INCDIR)/sorting/selection_sort.h
+basics: $(SRCDIR)/basics.cpp
 	$(CC) $(CFLAGS) -o $(OUTDIR)/basics $(SRCDIR)/basics.cpp
+
+sorting: $(SRCDIR)/sorting.cpp
+	$(CC) $(CFLAGS) -o $(OUTDIR)/sorting $(SRCDIR)/sorting.cpp $(INCDIR)/sorting -I.

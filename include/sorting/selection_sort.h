@@ -4,12 +4,18 @@
 #include <stdlib.h>
 #include <stdint.h>
 #include <stdbool.h>
+#include <vector>
 
-namespace algorithm_practice
+namespace alg
 {
+    template <class T>
     class SelectionSort
     {
-    }
+        public:
+            void sort(std::vector<T> list, int start, int end)
+            {
+            }
+    };
 }
 
 #endif

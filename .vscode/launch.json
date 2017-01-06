@@ -6,7 +6,7 @@
       "type": "cppdbg",
       "request": "launch",
       "preLaunchTask": "make",
-      "program": "${workspaceRoot}/bin/basics",
+      "program": "${workspaceRoot}/bin/sorting",
       "args": [],
       "stopAtEntry": false,
       "cwd": "${workspaceRoot}",
@@ -40,7 +40,7 @@
       "name": "C++ Attach",
       "type": "cppdbg",
       "request": "attach",
-      "program": "${workspaceRoot}/bin/basics",
+      "program": "${workspaceRoot}/bin/sorting",
       "processId": "${command.pickProcess}",
       "linux": {
         "MIMode": "gdb",
