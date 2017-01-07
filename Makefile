@@ -11,5 +11,5 @@ OUTDIR=./bin
 basics: $(SRCDIR)/basics.cpp
 	$(CC) $(CFLAGS) -o $(OUTDIR)/basics $(SRCDIR)/basics.cpp
 
-sorting: $(SRCDIR)/sorting.cpp
-	$(CC) $(CFLAGS) -o $(OUTDIR)/sorting $(SRCDIR)/sorting.cpp $(INCDIR)/sorting -I.
+sorting_selection: $(SRCDIR)/selection_sort.cpp
+	$(CC) $(CFLAGS) -o $(OUTDIR)/sorting_selection $(SRCDIR)/selection_sort.cpp $(INCDIR)/sorting -I.
