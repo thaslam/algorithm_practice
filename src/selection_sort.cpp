@@ -19,5 +19,7 @@ int main()
   {
     std::cout << v[i] << std::endl;
   }
+
+  delete sortAlg;
   return 0;
 }
