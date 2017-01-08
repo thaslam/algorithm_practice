@@ -4,6 +4,6 @@
   "version": "0.1.0",
   "command": "make",
   "isShellCommand": true,
-  "args": ["sorting_selection"],
+  "args": ["sorting_quick"],
   "showOutput": "always"
 }

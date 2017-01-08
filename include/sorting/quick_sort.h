@@ -1,43 +1,41 @@
 #ifndef QUICKSORT_H
 #define QUICKSORT_H
 
+#include <stdlib.h>
+#include <stdint.h>
+#include <stdbool.h>
+#include <vector>
+
 namespace alg
 {
   template<class T>
   class QuickSort
   {
     public:
-      void sort(std:vector<T>& list, int start, int end)
+      void sort(std::vector<T>& list, int start, int end)
       {
-          /*
-          create pivot
-          sort left
-          sort right
-          sort all
-          */
-          if (list.size() == 0 || list.size() == 1) return;
-          int pivot = list.size() / 2;
+          if (list.size() == 0 || (end-start) <= 1) return;
+          int pivot = start + ((end-start) / 2);
           T pivotValue = list[pivot];
           int i = start;
           int j = end;
-          
-          while (list[i] <= pivotValue) i++;
-          while (list[j] >= pivotValue) j--;
 
-          if (list[i] > list[j])
+          while (i < j)
           {
-            T swap = list[i];
-            list[i] = list[j];
-            list[j] = swap;
+            while (list[i] < pivotValue) i++;
+            while (list[j] > pivotValue) j--;
 
-            i++;
-            j--;
+            if (i < j)
+            {
+              std::swap(list[i], list[j]);
+              i++;
+              j--;
+            }
           }
-
-          sort(list, start, i);
-          sort(list, j, end);
+          if (i > start) sort(list, start, j);
+          if (j < end) sort(list, i, end);
       }
-  }
+  };
 }
 
 #endif

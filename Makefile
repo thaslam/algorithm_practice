@@ -13,3 +13,6 @@ basics: $(SRCDIR)/basics.cpp
 
 sorting_selection: $(SRCDIR)/selection_sort.cpp
 	$(CC) $(CFLAGS) -o $(OUTDIR)/sorting_selection $(SRCDIR)/selection_sort.cpp $(INCDIR)/sorting -I.
+
+sorting_quick: $(SRCDIR)/quick_sort.cpp
+	$(CC) $(CFLAGS) -o $(OUTDIR)/sorting_quick $(SRCDIR)/quick_sort.cpp $(INCDIR)/sorting -I.

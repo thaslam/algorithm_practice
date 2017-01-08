@@ -1,5 +1,5 @@
 #include <iostream>
-#include "selection_sort.h"
+#include "quick_sort.h"
 
 int main()
 {
@@ -13,12 +13,12 @@ int main()
   v[6] = 5;
   v[7] = 7;
 
-  alg::SelectionSort<int>* sortAlg = new alg::SelectionSort<int>();
-  sortAlg->sort(v);
+  alg::QuickSort<int>* sortAlg = new alg::QuickSort<int>();
+  sortAlg->sort(v, 0, 7);
   for (int i=0; i<v.size(); i++)
   {
     std::cout << v[i] << std::endl;
-  }›
+  }
 
   delete sortAlg;
   return 0;
